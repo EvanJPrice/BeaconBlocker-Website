@@ -1,0 +1,21 @@
+# Beacon Blocker
+
+> AI-powered browser extension that blocks distracting web content based on your personal rules.
+
+## Overview
+Beacon Blocker is a Chrome extension that uses AI to help users stay focused online. Users define blocking rules in natural language (e.g., "Block YouTube Shorts during work hours") and AI decisions happen in real-time.
+
+## Key Features
+- Natural language rule definition
+- Real-time AI content analysis
+- Preset profiles (Work, Personal, School)
+- Activity logging with AI explanations
+- Cross-device sync via dashboard
+
+## Links
+- Website: https://beaconblocker.com
+- Dashboard: https://beaconblocker.vercel.app
+- Chrome Extension: Available on Chrome Web Store
+
+## Contact
+support@beaconblocker.com
