@@ -52,9 +52,14 @@ export default function CTASection() {
                         <Button
                             size="lg"
                             className="bg-white hover:bg-slate-100 text-[#1e3a5a] px-8 py-6 text-lg rounded-xl transition-all"
+                            onClick={() => {
+                                const element = document.getElementById('faq');
+                                if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}
                         >
                             Learn More
-                            <ArrowRight className="w-5 h-5 ml-2" />
                         </Button>
                     </div>
 

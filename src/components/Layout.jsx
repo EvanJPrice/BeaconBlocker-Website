@@ -60,6 +60,14 @@ export default function Layout({ children, currentPageName }) {
                                     {link.name}
                                 </Link>
                             ))}
+                            <a
+                                href="https://dashboard.beaconblocker.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+                            >
+                                Dashboard
+                            </a>
                             <Button className="bg-[#c92a2a] hover:bg-[#a92525] text-white rounded-lg">
                                 <Chrome className="w-4 h-4 mr-2" />
                                 Start Free Trial
@@ -88,6 +96,15 @@ export default function Layout({ children, currentPageName }) {
                                             {link.name}
                                         </Link>
                                     ))}
+                                    <a
+                                        href="https://dashboard.beaconblocker.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="text-lg font-medium text-slate-600"
+                                    >
+                                        Dashboard
+                                    </a>
                                     <Button className="bg-[#c92a2a] hover:bg-[#a92525] text-white rounded-lg mt-4">
                                         <Chrome className="w-4 h-4 mr-2" />
                                         Start Free Trial
@@ -129,18 +146,37 @@ export default function Layout({ children, currentPageName }) {
                             <h4 className="font-semibold mb-4">Product</h4>
                             <ul className="space-y-3 text-slate-400">
                                 <li>
-                                    <Link to={createPageUrl('Home')} className="hover:text-white transition-colors">
+                                    <button
+                                        onClick={() => scrollToSection('top')}
+                                        className="hover:text-white transition-colors"
+                                    >
                                         Home
-                                    </Link>
+                                    </button>
                                 </li>
                                 <li>
-                                    <a href="#features" className="hover:text-white transition-colors">
+                                    <button
+                                        onClick={() => scrollToSection('features')}
+                                        className="hover:text-white transition-colors"
+                                    >
                                         Features
-                                    </a>
+                                    </button>
                                 </li>
                                 <li>
-                                    <a href="#faq" className="hover:text-white transition-colors">
+                                    <button
+                                        onClick={() => scrollToSection('faq')}
+                                        className="hover:text-white transition-colors"
+                                    >
                                         FAQ
+                                    </button>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://dashboard.beaconblocker.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        Dashboard
                                     </a>
                                 </li>
                             </ul>
