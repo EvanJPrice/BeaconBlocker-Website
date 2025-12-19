@@ -8,27 +8,13 @@ const sections = [
         title: "Information We Collect",
         content: `Beacon Blocker collects minimal information necessary to provide our service:
 
-        **Data Stored in Our Database:**
-        - Login credentials (email, securely hashed password)
-        - Your AI prompts and preset names (encrypted at rest)
-        - Blocking preferences (categories, allow/block lists)
-        - Bug reports you submit (optional)
+**Data Stored in Our Database:** Login credentials (email, securely hashed password), your AI prompts and preset names (encrypted at rest), blocking preferences (categories, allow/block lists), and bug reports you submit (optional).
 
-        **Data Sent to Our Servers for AI Analysis:**
-        - URLs you visit (to determine if they should be blocked)
-        - Page titles and metadata
-        - Brief page content snippets (first 500 characters)
-        This data is processed in real-time and NOT stored on our servers.
+**Data Sent to Our Servers for AI Analysis:** URLs you visit (to determine if they should be blocked), page titles and metadata, and brief page content snippets (first 500 characters). This data is processed in real-time and NOT stored on our servers.
 
-        **Stored Locally Only (Never Sent to Servers):**
-        - Your block history
-        - Extension settings and theme preferences
-        - Authentication tokens
+**Stored Locally Only (Never Sent to Servers):** Your block history, extension settings and theme preferences, and authentication tokens.
 
-        We do NOT collect:
-        - Your complete browsing history
-        - Form data or passwords you enter on websites
-        - Any data for advertising or tracking purposes`
+**We do NOT collect:** Your complete browsing history, form data or passwords you enter on websites, or any data for advertising or tracking purposes.`
     },
     {
         icon: Server,
@@ -50,16 +36,17 @@ const sections = [
         title: "Data Security",
         content: `We implement industry-standard security measures:
 
-        - **Encryption in Transit:** All data sent to our servers uses HTTPS encryption
-        - **Encryption at Rest:** Your prompts and settings are encrypted in our database
-        - **Secure Authentication:** We use Supabase for authentication with industry-standard practices
-        - **Minimal Data Retention:** Page data sent for AI analysis is processed immediately and not stored
-        - **Secure Infrastructure:** Our backend runs on secure cloud infrastructure (Render, Supabase)
+**Encryption in Transit:** All data sent to our servers uses HTTPS encryption.
 
-        **Third-Party Services:**
-        - Google Gemini AI (for content analysis - no user data stored by Google)
-        - Supabase (database and authentication)
-        - No advertising or tracking services`
+**Encryption at Rest:** Your prompts and settings are encrypted in our database.
+
+**Secure Authentication:** We use Supabase for authentication with industry-standard practices.
+
+**Minimal Data Retention:** Page data sent for AI analysis is processed immediately and not stored.
+
+**Secure Infrastructure:** Our backend runs on secure cloud infrastructure (Render, Supabase).
+
+**Third-Party Services:** Google Gemini AI (for content analysis - no user data stored by Google), Supabase (database and authentication). No advertising or tracking services.`
     },
     {
         icon: Shield,
@@ -76,17 +63,11 @@ const sections = [
     {
         icon: Trash2,
         title: "Data Retention",
-        content: `**Server Data:**
-        - Account data retained while your account is active
-        - Prompts and settings retained until you delete them or your account
-        - Page data for AI analysis: NOT retained (processed in real-time only)
+        content: `**Server Data:** Account data retained while your account is active. Prompts and settings retained until you delete them or your account. Page data for AI analysis is NOT retained (processed in real-time only).
 
-        **Local Data:**
-        - Block history retained until you clear it or uninstall the extension
-        - Cached decisions persist until you change your rules
+**Local Data:** Block history retained until you clear it or uninstall the extension. Cached decisions persist until you change your rules.
 
-        **Account Deletion:**
-        When you delete your account, all server-side data is permanently removed.`
+**Account Deletion:** When you delete your account, all server-side data is permanently removed.`
     },
     {
         icon: Mail,
