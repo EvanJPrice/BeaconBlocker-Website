@@ -19,17 +19,13 @@ const sections = [
     {
         icon: Server,
         title: "How We Process Data",
-        content: `**AI Analysis:**
-        When you visit a webpage, we send the URL, page title, and a brief content snippet to our secure server where an AI model determines if the page matches your blocking criteria. This decision is returned immediately and the page data is NOT stored.
+        content: `**AI Analysis:** When you visit a webpage, we send the URL, page title, and a brief content snippet to our secure server where an AI model determines if the page matches your blocking criteria. This decision is returned immediately and the page data is NOT stored.
 
-        **Your Prompts & Settings:**
-        Your custom AI prompts and blocking preferences are encrypted and stored in our database, allowing you to sync settings across devices.
+**Your Prompts & Settings:** Your custom AI prompts and blocking preferences are encrypted and stored in our database, allowing you to sync settings across devices.
 
-        **Block History:**
-        Your history of blocked pages is stored locally on your device only. This data never leaves your browser and you can clear it at any time.
+**Block History:** Your history of blocked pages is stored locally on your device only. This data never leaves your browser and you can clear it at any time.
 
-        **Caching:**
-        AI decisions are cached locally until you change your rules or settings, reducing server requests significantly.`
+**Caching:** AI decisions are cached locally until you change your rules or settings, reducing server requests significantly.`
     },
     {
         icon: Lock,

@@ -9,12 +9,16 @@ import {
 
 const faqs = [
     {
-        question: "How does Beacon Blocker's AI work?",
-        answer: "Beacon Blocker uses advanced natural language processing to understand your browsing preferences. Simply describe what you want to avoid or focus on in plain English, and our AI interprets your instructions to filter content accordingly. The AI analyzes page content, images, and context to make intelligent decisions about what to show or hide."
+        question: "What is Beacon Blocker?",
+        answer: "Beacon Blocker is a Chrome extension that uses AI to block distracting websites based on your personal goals. Instead of manually adding sites to a blocklist, you describe what you want to avoid in plain English, and the AI automatically decides what to block as you browse."
+    },
+    {
+        question: "How does the AI work?",
+        answer: "Beacon Blocker uses Google's Gemini Flash model to analyze page content against your instructions. When you visit a page, we send a brief summary to our server, and the AI returns a block or allow decision in real-time."
     },
     {
         question: "Is my browsing data collected or stored?",
-        answer: "No. Beacon Blocker processes everything locally in your browser. Your browsing history, preferences, and filtered content never leave your device. We're committed to privacy-first design - we don't collect, store, or sell any of your personal data."
+        answer: "When you visit a page, we send the URL, title, and a brief content snippet to our secure server for AI analysis. This data is processed in real-time and NOT stored. Your block history stays on your device, and your settings are encrypted in our database. We never sell your data."
     },
     {
         question: "Which websites does Beacon Blocker work on?",
@@ -22,23 +26,23 @@ const faqs = [
     },
     {
         question: "Can I create different profiles for different situations?",
-        answer: "Yes! You can create multiple instruction sets for different browsing contexts. For example, you might have a 'Work Mode' that blocks social media and entertainment, and a 'Relaxation Mode' that filters out stressful news content."
+        answer: "Yes! We call them presets. You can save multiple rule presets for different browsing contexts. For example, you might have a 'Work Mode' preset that blocks social media, and a 'Relaxation Mode' preset that filters out stressful news."
     },
     {
         question: "Is Beacon Blocker free to use?",
-        answer: "Beacon Blocker offers a generous free tier that includes core AI filtering features. Premium features like advanced customization, unlimited instruction sets, and priority processing are available through our affordable subscription plans."
-    },
-    {
-        question: "How do I give instructions to my beacon?",
-        answer: "Just type naturally! Examples include: 'Hide all political content', 'Block clickbait headlines', 'Only show cooking videos', or 'Blur images of spiders'. The AI understands context and nuance, so you don't need to use any special syntax or commands."
+        answer: "Beacon Blocker offers a free trial so you can experience the full power of AI-powered content blocking. After the trial, an affordable subscription is required to continue using the service."
     },
     {
         question: "Does it slow down my browsing?",
-        answer: "Not noticeably. Beacon Blocker is optimized for performance with minimal impact on page load times. The AI processing happens efficiently in the background, and most filtering decisions are made in milliseconds."
+        answer: "Beacon Blocker is optimized for performance with minimal impact on page load times. There may be a brief delay when blocking a page as the AI processes the content, but general browsing remains fast and responsive."
     },
     {
-        question: "Can I temporarily disable the extension?",
-        answer: "Absolutely. You can pause Beacon Blocker with one click from the extension icon, or disable it for specific websites. Your preferences are saved so you can resume exactly where you left off."
+        question: "Can I temporarily disable blocking?",
+        answer: "Yes. You can either sign out from the extension to stop all blocking, or clear your instructions in the dashboard. Your presets are always saved so you can restore your settings when you're ready to resume."
+    },
+    {
+        question: "Does Beacon Blocker work on mobile?",
+        answer: "Currently, Beacon Blocker is only available as a Chrome browser extension for desktop. Mobile support is being explored for future development."
     }
 ];
 

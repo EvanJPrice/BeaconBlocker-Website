@@ -89,13 +89,13 @@ export default function HeroSection() {
                                 variant="outline"
                                 className="border-2 border-slate-200 hover:border-slate-300 px-8 py-6 text-lg rounded-xl"
                                 onClick={() => {
-                                    const element = document.getElementById('how-it-works');
+                                    const element = document.getElementById('faq');
                                     if (element) {
                                         element.scrollIntoView({ behavior: 'smooth' });
                                     }
                                 }}
                             >
-                                See How It Works
+                                Learn More
                             </Button>
                         </div>
 

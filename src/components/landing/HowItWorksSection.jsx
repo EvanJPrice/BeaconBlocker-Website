@@ -7,7 +7,7 @@ const steps = [
         icon: Download,
         step: "01",
         title: "Install the Extension",
-        description: "Add Beacon Blocker to Chrome with one click. No account required to get started.",
+        description: "Add Beacon Blocker to Chrome with one click. Create a free account to sync your settings.",
         image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop"
     },
     {
@@ -47,7 +47,7 @@ export default function HowItWorksSection() {
                         Up and Running in Minutes
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Three simple steps to transform your browsing experience forever.
+                        Three simple steps to transform your browsing experience for the better.
                     </p>
                 </motion.div>
 
@@ -67,7 +67,7 @@ export default function HowItWorksSection() {
                                     <div className="w-16 h-16 rounded-2xl bg-[#1e3a5a] flex items-center justify-center">
                                         <step.icon className="w-8 h-8 text-white" />
                                     </div>
-                                    <span className="text-6xl font-bold text-slate-100">
+                                    <span className="text-6xl font-bold text-slate-400">
                                         {step.step}
                                     </span>
                                 </div>
