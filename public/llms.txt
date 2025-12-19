@@ -18,4 +18,4 @@ Beacon Blocker is a Chrome extension that uses AI to help users stay focused onl
 - Chrome Extension: Available on Chrome Web Store
 
 ## Contact
-support@beaconblocker.com
+beaconblocker.dev@gmail.com

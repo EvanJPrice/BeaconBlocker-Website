@@ -71,7 +71,7 @@ const sections = [
 **Local Data:** Clear your local block history anytime from the extension
 **Export:** Your settings can be copied as presets
 
-For users in the European Union, you have additional rights under GDPR including the right to erasure, rectification, and data portability.`
+**Note:** This service is not currently GDPR compliant.`
     },
     {
         icon: Trash2,
@@ -93,7 +93,7 @@ For users in the European Union, you have additional rights under GDPR including
         title: "Contact Us",
         content: `If you have any questions about this Privacy Policy or our data practices, please contact us:
 
-**Email:** privacy@beaconblocker.com
+**Email:** beaconblocker.dev@gmail.com
 
 **Response Time:** We aim to respond to all privacy-related inquiries within 48 hours.
 
@@ -127,7 +127,7 @@ export default function Privacy() {
                             Your privacy is our priority. Learn how Beacon Blocker protects your data.
                         </p>
                         <p className="text-slate-400 mt-6">
-                            Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            Last Updated: December 19, 2024
                         </p>
                     </motion.div>
                 </div>
@@ -182,30 +182,26 @@ export default function Privacy() {
                                     {section.content.split('\n\n').map((paragraph, pIndex) => (
                                         <div key={pIndex} className="mb-4">
                                             {paragraph.split('\n').map((line, lIndex) => {
-                                                if (line.startsWith('**') && line.endsWith('**')) {
-                                                    return (
-                                                        <h3 key={lIndex} className="font-semibold text-slate-900 mt-4 mb-2">
-                                                            {line.replace(/\*\*/g, '')}
-                                                        </h3>
+                                                // Helper to parse inline **bold** text
+                                                const parseInlineBold = (text) => {
+                                                    const parts = text.split(/\*\*([^*]+)\*\*/g);
+                                                    return parts.map((part, i) =>
+                                                        i % 2 === 1
+                                                            ? <strong key={i} className="text-slate-800">{part}</strong>
+                                                            : part
                                                     );
-                                                } else if (line.startsWith('**')) {
-                                                    const parts = line.split('**');
-                                                    return (
-                                                        <p key={lIndex} className="text-slate-600 leading-relaxed">
-                                                            <strong className="text-slate-800">{parts[1]}</strong>
-                                                            {parts[2]}
-                                                        </p>
-                                                    );
-                                                } else if (line.startsWith('- ')) {
+                                                };
+
+                                                if (line.startsWith('- ')) {
                                                     return (
                                                         <li key={lIndex} className="text-slate-600 ml-4">
-                                                            {line.substring(2)}
+                                                            {parseInlineBold(line.substring(2))}
                                                         </li>
                                                     );
                                                 } else if (line.trim()) {
                                                     return (
                                                         <p key={lIndex} className="text-slate-600 leading-relaxed">
-                                                            {line}
+                                                            {parseInlineBold(line)}
                                                         </p>
                                                     );
                                                 }
