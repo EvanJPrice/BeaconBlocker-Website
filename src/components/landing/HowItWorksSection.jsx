@@ -7,24 +7,25 @@ const steps = [
         icon: Download,
         step: "01",
         title: "Install the Extension",
-        description: "Add Beacon Blocker to Chrome with one click. Create a free account to sync your settings.",
-        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop"
+        description: "Add Beacon Blocker to Chrome with one click. It only takes a few seconds.",
+        video: "/videos/step1-install.mp4" // Looping video showing Chrome Web Store install
     },
     {
         icon: Settings,
         step: "02",
-        title: "Set Your Preferences",
-        description: "Tell your AI beacon what you want to avoid or focus on using simple, natural language.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+        title: "Sign Up & Set Preferences",
+        description: "Create a free account and tell Beacon what to block using simple, natural language.",
+        video: "/videos/step2-signup.mp4" // Looping video showing login page → dashboard
     },
     {
         icon: Compass,
         step: "03",
-        title: "Browse with Guidance",
-        description: "Your beacon works silently in the background, filtering content and keeping you on track.",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop"
+        title: "Browse",
+        description: "That's it. Beacon works silently in the background, keeping you focused.",
+        video: "/videos/step3-browse.mp4" // Looping video showing browsing with blocks
     }
 ];
+
 
 export default function HowItWorksSection() {
     return (
@@ -79,15 +80,18 @@ export default function HowItWorksSection() {
                                 </p>
                             </div>
 
-                            {/* Image placeholder */}
+                            {/* Video placeholder */}
                             <div className="flex-1 w-full">
                                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200">
-                                    <img
-                                        src={step.image}
-                                        alt={step.title}
+                                    <video
+                                        src={step.video}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
                                         className="w-full h-64 md:h-80 object-cover"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
                                 </div>
                             </div>
                         </motion.div>
