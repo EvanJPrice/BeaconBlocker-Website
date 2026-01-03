@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Settings, Compass } from 'lucide-react';
 
@@ -26,7 +26,51 @@ const steps = [
     }
 ];
 
+// Video component that plays when in view
+function ScrollVideo({ src }) {
+    const videoRef = useRef(null);
 
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Reset to beginning and play when visible
+                        video.currentTime = 0;
+                        video.play().catch(() => { }); // Catch autoplay errors
+                    } else {
+                        // Pause when not visible
+                        video.pause();
+                    }
+                });
+            },
+            {
+                // Only trigger when video crosses the center of the viewport
+                // -50% top margin means it won't trigger until past center
+                // -50% bottom margin means it stops when past center going down
+                rootMargin: '-50% 0px -50% 0px',
+                threshold: 0
+            }
+        );
+
+        observer.observe(video);
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <video
+            ref={videoRef}
+            src={src}
+            loop
+            muted
+            playsInline
+            className="w-full h-64 md:h-80 object-cover"
+        />
+    );
+}
 
 export default function HowItWorksSection() {
     return (
@@ -81,17 +125,10 @@ export default function HowItWorksSection() {
                                 </p>
                             </div>
 
-                            {/* Video placeholder */}
+                            {/* Video - plays when scrolled into view */}
                             <div className="flex-1 w-full">
                                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200">
-                                    <video
-                                        src={step.video}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-64 md:h-80 object-cover"
-                                    />
+                                    <ScrollVideo src={step.video} />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
                                 </div>
                             </div>
