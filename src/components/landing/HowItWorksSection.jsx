@@ -7,24 +7,25 @@ const steps = [
         icon: Download,
         step: "01",
         title: "Install the Extension",
-        description: "Add Beacon Blocker to Chrome with one click. It only takes a few seconds.",
-        video: "/videos/step1-install.mp4" // Looping video showing Chrome Web Store install
+        description: "Add Beacon Blocker to Chrome with just a few clicks. Create a free account to sync your settings.",
+        video: "/videos/step1-install.mp4"
     },
     {
         icon: Settings,
         step: "02",
-        title: "Sign Up & Set Preferences",
-        description: "Create a free account and tell Beacon what to block using simple, natural language.",
-        video: "/videos/step2-signup.mp4" // Looping video showing login page → dashboard
+        title: "Set Your Preferences",
+        description: "Login to tell your AI beacon what you want to avoid with simple, natural language.",
+        video: "/videos/step2-signup.mp4"
     },
     {
         icon: Compass,
         step: "03",
-        title: "Browse",
-        description: "That's it. Beacon works silently in the background, keeping you focused.",
-        video: "/videos/step3-browse.mp4" // Looping video showing browsing with blocks
+        title: "Browse with Guidance",
+        description: "Set sail and let your beacon filter content to keep you on track.",
+        video: "/videos/step3-browse.mp4"
     }
 ];
+
 
 
 export default function HowItWorksSection() {
