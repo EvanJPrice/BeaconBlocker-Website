@@ -163,6 +163,14 @@ export default function Layout({ children, currentPageName }) {
                                 </li>
                                 <li>
                                     <button
+                                        onClick={() => scrollToSection('how-it-works')}
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        Getting Started
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
                                         onClick={() => scrollToSection('faq')}
                                         className="hover:text-white transition-colors"
                                     >
