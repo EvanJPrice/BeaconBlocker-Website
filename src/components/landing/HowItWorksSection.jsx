@@ -25,10 +25,12 @@ const steps = [
         video: "/videos/step3-browse.mp4"
     }
 ];
-// Video component that plays once when fully in view
+// Global ref to track which video is currently playing
+let currentlyPlayingVideo = null;
+
+// Video component - newest to enter view plays, others pause
 function ScrollVideo({ src }) {
     const videoRef = useRef(null);
-    const hasPlayedRef = useRef(false);
 
     useEffect(() => {
         const video = videoRef.current;
@@ -37,21 +39,26 @@ function ScrollVideo({ src }) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting && !hasPlayedRef.current) {
-                        // Play from beginning when fully visible (first time only)
+                    if (entry.isIntersecting) {
+                        // Pause any other playing video
+                        if (currentlyPlayingVideo && currentlyPlayingVideo !== video) {
+                            currentlyPlayingVideo.pause();
+                        }
+                        // Play this video from beginning
                         video.currentTime = 0;
                         video.play().catch(() => { });
-                        hasPlayedRef.current = true;
+                        currentlyPlayingVideo = video;
                     } else if (!entry.isIntersecting) {
                         // Pause when out of view
                         video.pause();
-                        // Reset so it plays again next time it comes into view
-                        hasPlayedRef.current = false;
+                        if (currentlyPlayingVideo === video) {
+                            currentlyPlayingVideo = null;
+                        }
                     }
                 });
             },
             {
-                // Trigger when video is fully visible (100% in view)
+                // Trigger when video is fully visible
                 threshold: 1.0
             }
         );
@@ -63,8 +70,13 @@ function ScrollVideo({ src }) {
     const handleClick = () => {
         const video = videoRef.current;
         if (video) {
+            // Stop any other playing video
+            if (currentlyPlayingVideo && currentlyPlayingVideo !== video) {
+                currentlyPlayingVideo.pause();
+            }
             video.currentTime = 0;
             video.play().catch(() => { });
+            currentlyPlayingVideo = video;
         }
     };
 
@@ -79,6 +91,7 @@ function ScrollVideo({ src }) {
         />
     );
 }
+
 
 export default function HowItWorksSection() {
     return (
