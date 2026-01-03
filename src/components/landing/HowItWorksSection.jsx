@@ -31,10 +31,15 @@ let currentlyPlayingVideo = null;
 // Video component - newest to enter view plays, others pause
 function ScrollVideo({ src }) {
     const videoRef = useRef(null);
+    const [hasEnded, setHasEnded] = React.useState(false);
 
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
+
+        // Listen for video end
+        const handleEnded = () => setHasEnded(true);
+        video.addEventListener('ended', handleEnded);
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -48,6 +53,7 @@ function ScrollVideo({ src }) {
                         video.currentTime = 0;
                         video.play().catch(() => { });
                         currentlyPlayingVideo = video;
+                        setHasEnded(false);
                     } else if (!entry.isIntersecting) {
                         // Pause when out of view
                         video.pause();
@@ -64,7 +70,10 @@ function ScrollVideo({ src }) {
         );
 
         observer.observe(video);
-        return () => observer.disconnect();
+        return () => {
+            observer.disconnect();
+            video.removeEventListener('ended', handleEnded);
+        };
     }, []);
 
     const handleClick = () => {
@@ -77,18 +86,40 @@ function ScrollVideo({ src }) {
             video.currentTime = 0;
             video.play().catch(() => { });
             currentlyPlayingVideo = video;
+            setHasEnded(false);
         }
     };
 
     return (
-        <video
-            ref={videoRef}
-            src={src}
-            muted
-            playsInline
-            onClick={handleClick}
-            className="w-full h-64 md:h-80 object-cover cursor-pointer"
-        />
+        <div className="relative cursor-pointer" onClick={handleClick}>
+            <video
+                ref={videoRef}
+                src={src}
+                muted
+                playsInline
+                className="w-full h-64 md:h-80 object-cover"
+            />
+            {/* Replay overlay - shown when video ends */}
+            {hasEnded && (
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center transition-opacity">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                        <svg
+                            className="w-12 h-12 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            )}
+        </div>
     );
 }
 
