@@ -25,10 +25,10 @@ const steps = [
         video: "/videos/step3-browse.mp4"
     }
 ];
-
-// Video component that plays when in view
+// Video component that plays once when fully in view
 function ScrollVideo({ src }) {
     const videoRef = useRef(null);
+    const hasPlayedRef = useRef(false);
 
     useEffect(() => {
         const video = videoRef.current;
@@ -37,21 +37,22 @@ function ScrollVideo({ src }) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Reset to beginning and play when visible
+                    if (entry.isIntersecting && !hasPlayedRef.current) {
+                        // Play from beginning when fully visible (first time only)
                         video.currentTime = 0;
-                        video.play().catch(() => { }); // Catch autoplay errors
-                    } else {
-                        // Pause when not visible
+                        video.play().catch(() => { });
+                        hasPlayedRef.current = true;
+                    } else if (!entry.isIntersecting) {
+                        // Pause when out of view
                         video.pause();
+                        // Reset so it plays again next time it comes into view
+                        hasPlayedRef.current = false;
                     }
                 });
             },
             {
-                // Trigger when video enters top 25% of viewport
-                // This ensures title is still visible when video starts
-                rootMargin: '-33% 0px -67% 0px',
-                threshold: 0
+                // Trigger when video is fully visible (100% in view)
+                threshold: 1.0
             }
         );
 
@@ -59,14 +60,22 @@ function ScrollVideo({ src }) {
         return () => observer.disconnect();
     }, []);
 
+    const handleClick = () => {
+        const video = videoRef.current;
+        if (video) {
+            video.currentTime = 0;
+            video.play().catch(() => { });
+        }
+    };
+
     return (
         <video
             ref={videoRef}
             src={src}
-            loop
             muted
             playsInline
-            className="w-full h-64 md:h-80 object-cover"
+            onClick={handleClick}
+            className="w-full h-64 md:h-80 object-cover cursor-pointer"
         />
     );
 }
