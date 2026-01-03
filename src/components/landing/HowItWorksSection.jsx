@@ -48,10 +48,9 @@ function ScrollVideo({ src }) {
                 });
             },
             {
-                // Only trigger when video crosses the center of the viewport
-                // -50% top margin means it won't trigger until past center
-                // -50% bottom margin means it stops when past center going down
-                rootMargin: '-50% 0px -50% 0px',
+                // Trigger when video enters top 25% of viewport
+                // This ensures title is still visible when video starts
+                rootMargin: '-33% 0px -67% 0px',
                 threshold: 0
             }
         );
