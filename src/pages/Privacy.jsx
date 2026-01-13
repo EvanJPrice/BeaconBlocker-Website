@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Eye, Lock, Server, Trash2, Mail } from 'lucide-react';
 
@@ -80,6 +80,17 @@ We may update this Privacy Policy from time to time. We will notify you of any m
 ];
 
 export default function Privacy() {
+    useEffect(() => {
+        // Set canonical URL for privacy page
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.setAttribute('rel', 'canonical');
+            document.head.appendChild(canonical);
+        }
+        canonical.setAttribute('href', 'https://beaconblocker.com/privacy');
+    }, []);
+
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
             {/* Header */}
