@@ -13,25 +13,25 @@ const features = [
     {
         icon: Brain,
         title: "AI-Powered Filtering",
-        description: "Natural language instructions let you describe exactly what content you want to see or avoid.",
+        description: "Describe your goals in plain English, and your Beacon evaluates every page you visit — blocking or allowing based on its URL and title.",
         color: "from-amber-500 to-orange-500"
     },
     {
         icon: Shield,
         title: "Distraction Blocker",
-        description: "Stay focused by blocking time-wasting content, clickbait, and endless scroll patterns.",
+        description: "Block entire sites or specific pages — like entertainment YouTube while keeping tutorials, or Reddit without the news feed.",
         color: "from-cyan-500 to-blue-500"
     },
     {
         icon: Sliders,
-        title: "Custom Rules",
-        description: "Create personalized browsing rules that work across all your favorite websites.",
+        title: "Timers, Schedules & Categories",
+        description: "Set time limits, schedule blocks, or toggle entire categories on and off. Pair with allow/block lists for full control.",
         color: "from-rose-500 to-pink-500"
     },
     {
         icon: MessageSquare,
-        title: "Conversational Control",
-        description: "Simply tell your beacon what you need - no complicated settings or configurations required.",
+        title: "Presets & Auto-Sync",
+        description: "Save different presets for work, study, or relaxation. Changes sync instantly — no save button needed.",
         color: "from-blue-500 to-indigo-500"
     }
 ];

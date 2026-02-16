@@ -72,35 +72,49 @@ export default function HeroSection() {
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                            Beacon Blocker is your personal AI guide that puts you in control.
-                            Block distractions, filter content, and browse smarter with intelligent assistance.
+                            Beacon Blocker is your AI-powered browsing companion.
+                            Block distracting sites, set timers and schedules, and stay focused with intelligent page-level filtering.
                         </p>
 
+                        {/* Promo banner */}
+                        <div className="mb-8 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-5 py-2.5">
+                            <Sparkles className="w-4 h-4 text-amber-500" />
+                            <span className="text-sm font-semibold text-amber-800">
+                                Free through February — no credit card required
+                            </span>
+                        </div>
+
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <Button
-                                size="lg"
-                                className="bg-[#c92a2a] hover:bg-[#a92525] text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-red-200 transition-all hover:shadow-xl hover:-translate-y-0.5"
+                            <a
+                                href="https://chromewebstore.google.com/detail/beacon-blocker/pcdcefcldhcnbmiejmihlcphbglflakm"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                <Chrome className="w-5 h-5 mr-2" />
-                                Start Free Trial
-                            </Button>
+                                <Button
+                                    size="lg"
+                                    className="bg-[#c92a2a] hover:bg-[#a92525] text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-red-200 transition-all hover:shadow-xl hover:-translate-y-0.5 w-full"
+                                >
+                                    <Chrome className="w-5 h-5 mr-2" />
+                                    Get Started for Free
+                                </Button>
+                            </a>
                             <Button
                                 size="lg"
                                 variant="outline"
                                 className="border-2 border-slate-200 hover:border-slate-300 px-8 py-6 text-lg rounded-xl"
                                 onClick={() => {
-                                    const element = document.getElementById('faq');
+                                    const element = document.getElementById('how-it-works');
                                     if (element) {
                                         element.scrollIntoView({ behavior: 'smooth' });
                                     }
                                 }}
                             >
-                                Learn More
+                                See How It Works
                             </Button>
                         </div>
 
                         <p className="mt-6 text-sm text-slate-500">
-                            Available exclusively for Google Chrome
+                            Available exclusively for Google Chrome. Refer friends to earn bonus days.
                         </p>
                     </motion.div>
 

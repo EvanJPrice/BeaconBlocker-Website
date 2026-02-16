@@ -10,35 +10,35 @@ import {
 const faqs = [
     {
         question: "What is Beacon Blocker?",
-        answer: "Beacon Blocker is a Chrome extension that uses AI to block distracting websites based on your personal goals. Instead of manually adding sites to a blocklist, you describe what you want to avoid in plain English, and the AI automatically decides what to block as you browse."
+        answer: "Beacon Blocker is a Chrome extension that uses AI to block distracting websites based on your personal goals. Instead of manually adding sites to a blocklist, you describe what you want to avoid in plain English, and the AI evaluates each page you visit — blocking or allowing based on its URL and title."
     },
     {
         question: "How does the AI work?",
-        answer: "Beacon Blocker uses Google's Gemini Flash model to analyze page content against your instructions. When you visit a page, we send a brief summary to our server, and the AI returns a block or allow decision in real-time."
+        answer: "Beacon Blocker uses Google's Gemini Flash model to evaluate pages against your instructions. When you visit a page, we send its URL and title to our server, and the AI returns a block or allow decision in real-time. Decisions are cached so repeat visits are instant."
     },
     {
         question: "Is my browsing data collected or stored?",
-        answer: "When you visit a page, we send the URL, title, and a brief content snippet to our secure server for AI analysis. This data is processed in real-time and NOT stored. Your block history stays on your device, and your settings are encrypted in our database. We never sell your data."
+        answer: "When you visit a page, we send the URL and page title to our secure server for AI analysis. This data is processed in real-time and NOT stored. Your activity log stays on your device, and your settings are encrypted in our database. We never sell your data."
     },
     {
         question: "Which websites does Beacon Blocker work on?",
-        answer: "Beacon Blocker works on virtually any website you visit. Whether you're browsing social media, news sites, video platforms, or general web pages, your AI beacon is always ready to help filter content based on your preferences."
+        answer: "Beacon Blocker works on virtually any website you visit. It evaluates pages at the URL level — so it can distinguish between different parts of a site (e.g. educational vs entertainment YouTube). You can also use quick-block categories and allow/block lists for simpler rules."
     },
     {
         question: "Can I create different profiles for different situations?",
-        answer: "Yes! We call them presets. You can save multiple rule presets for different browsing contexts. For example, you might have a 'Work Mode' preset that blocks social media, and a 'Relaxation Mode' preset that filters out stressful news."
+        answer: "Yes! We call them presets. You can save multiple presets for different browsing contexts — like 'Work Mode' that blocks social media, or 'Study Mode' that only allows .edu sites. Switch between them with one click."
     },
     {
         question: "Is Beacon Blocker free to use?",
-        answer: "Beacon Blocker offers a free trial so you can experience the full power of AI-powered content blocking. After the trial, an affordable subscription is required to continue using the service."
+        answer: "Beacon Blocker comes with a 7-day free trial — no credit card required. After the trial, a subscription is required to continue using the service. You can subscribe directly from your dashboard. We also have a referral program: share your code with friends and you'll both earn bonus days when they subscribe."
     },
     {
         question: "Does it slow down my browsing?",
-        answer: "Beacon Blocker is optimized for performance with minimal impact on page load times. There may be a brief delay when blocking a page as the AI processes the content, but general browsing remains fast and responsive."
+        answer: "Beacon Blocker is optimized for performance with minimal impact on page load times. Known sites are categorized instantly, and AI decisions are cached so repeat visits skip the AI entirely. Most pages load without any noticeable delay."
     },
     {
         question: "Can I temporarily disable blocking?",
-        answer: "Yes. You can either sign out from the extension to stop all blocking, or clear your instructions in the dashboard. Your presets are always saved so you can restore your settings when you're ready to resume."
+        answer: "Yes. You can pause blocking from the extension popup, clear your instructions in the dashboard, or sign out from the extension. Your presets are always saved so you can restore your settings when you're ready to resume."
     },
     {
         question: "Does Beacon Blocker work on mobile?",

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { Chrome, ArrowRight } from 'lucide-react';
+import { Chrome, ArrowRight, Gift } from 'lucide-react';
 
 export default function CTASection() {
     return (
@@ -37,34 +37,49 @@ export default function CTASection() {
                         Ready to Take Control of Your Browsing?
                     </h2>
 
-                    <p className="text-xl text-slate-300 mb-10 leading-relaxed">
-                        Experience smarter browsing with Beacon Blocker's intelligent AI assistant.
+                    <p className="text-xl text-slate-300 mb-4 leading-relaxed">
+                        Experience smarter browsing with AI-powered content blocking.
                     </p>
 
+                    {/* Promo callout */}
+                    <div className="inline-flex items-center gap-2 bg-amber-400/15 border border-amber-400/30 rounded-full px-5 py-2.5 mb-10">
+                        <Gift className="w-4 h-4 text-amber-300" />
+                        <span className="text-sm font-semibold text-amber-200">
+                            Free through February — plus earn bonus days by referring friends
+                        </span>
+                    </div>
+
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button
-                            size="lg"
-                            className="bg-[#c92a2a] hover:bg-[#a92525] text-white px-8 py-6 text-lg rounded-xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
+                        <a
+                            href="https://chromewebstore.google.com/detail/beacon-blocker/pcdcefcldhcnbmiejmihlcphbglflakm"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            <Chrome className="w-5 h-5 mr-2" />
-                            Start Free Trial
-                        </Button>
-                        <Button
-                            size="lg"
-                            className="bg-white hover:bg-slate-100 text-[#1e3a5a] px-8 py-6 text-lg rounded-xl transition-all"
-                            onClick={() => {
-                                const element = document.getElementById('faq');
-                                if (element) {
-                                    element.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
+                            <Button
+                                size="lg"
+                                className="bg-[#c92a2a] hover:bg-[#a92525] text-white px-8 py-6 text-lg rounded-xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5 w-full"
+                            >
+                                <Chrome className="w-5 h-5 mr-2" />
+                                Get Started for Free
+                            </Button>
+                        </a>
+                        <a
+                            href="https://dashboard.beaconblocker.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            Learn More
-                        </Button>
+                            <Button
+                                size="lg"
+                                className="bg-white hover:bg-slate-100 text-[#1e3a5a] px-8 py-6 text-lg rounded-xl transition-all w-full"
+                            >
+                                <ArrowRight className="w-5 h-5 mr-2" />
+                                Go to Dashboard
+                            </Button>
+                        </a>
                     </div>
 
                     <p className="mt-8 text-slate-400 text-sm">
-                        Available exclusively for Google Chrome
+                        Available exclusively for Google Chrome. Already a user? Manage your subscription from the dashboard.
                     </p>
                 </motion.div>
             </div>

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/lib/utils';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, Chrome } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 // Smooth scroll to element or top
 const scrollToSection = (sectionId) => {
@@ -68,10 +68,15 @@ export default function Layout({ children, currentPageName }) {
                             >
                                 Dashboard
                             </a>
-                            <Button className="bg-[#c92a2a] hover:bg-[#a92525] text-white rounded-lg">
-                                <Chrome className="w-4 h-4 mr-2" />
-                                Start Free Trial
-                            </Button>
+                            <a
+                                href="https://dashboard.beaconblocker.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button className="bg-[#c92a2a] hover:bg-[#a92525] text-white rounded-lg">
+                                    Get Started
+                                </Button>
+                            </a>
                         </div>
 
                         {/* Mobile Menu */}
@@ -105,10 +110,16 @@ export default function Layout({ children, currentPageName }) {
                                     >
                                         Dashboard
                                     </a>
-                                    <Button className="bg-[#c92a2a] hover:bg-[#a92525] text-white rounded-lg mt-4">
-                                        <Chrome className="w-4 h-4 mr-2" />
-                                        Start Free Trial
-                                    </Button>
+                                    <a
+                                        href="https://dashboard.beaconblocker.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        <Button className="bg-[#c92a2a] hover:bg-[#a92525] text-white rounded-lg mt-4 w-full">
+                                            Get Started
+                                        </Button>
+                                    </a>
                                 </div>
                             </SheetContent>
                         </Sheet>

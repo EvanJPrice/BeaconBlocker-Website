@@ -8,9 +8,11 @@ const sections = [
         title: "Information We Collect",
         content: `Beacon Blocker collects minimal information necessary to provide our service:
 
-**Data Stored in Our Database:** Login credentials (email, securely hashed password), your AI prompts and preset names (encrypted at rest), blocking preferences (categories, allow/block lists), and bug reports you submit (optional).
+**Data Stored in Our Database:** Login credentials (email, securely hashed password), your AI prompts and preset names (encrypted at rest), blocking preferences (categories, allow/block lists), accountability contact details (name and email, encrypted with AES-256-GCM), email preferences, engagement events (e.g. pause/unpause activity), and bug reports you submit (optional).
 
 **Data Sent to Our Servers for AI Analysis:** URLs you visit (to determine if they should be blocked), page titles and metadata, and brief page content snippets (first 500 characters). This data is processed in real-time and NOT stored on our servers.
+
+**Payment Information:** Subscription and billing data is handled entirely by Stripe. We do not store credit card numbers or bank details. We only store your Stripe customer ID and subscription status.
 
 **Stored Locally Only (Never Sent to Servers):** Your block history, extension settings and theme preferences, and authentication tokens.
 
@@ -25,6 +27,10 @@ const sections = [
 
 **Block History:** Your history of blocked pages is stored locally on your device only. This data never leaves your browser and you can clear it at any time.
 
+**Accountability Contacts:** If you use the accountability feature, your contact's name and email are encrypted with AES-256-GCM (keyed per user) before storage. Contacts receive email notifications related to unlock requests and may approve or deny them.
+
+**Email Communications:** We may send transactional emails related to accountability features, weekly usage reports (if opted in), and account-related notifications. You can manage email preferences from your dashboard.
+
 **Caching:** AI decisions are cached locally until you change your rules or settings, reducing server requests significantly.`
     },
     {
@@ -34,15 +40,17 @@ const sections = [
 
 **Encryption in Transit:** All data sent to our servers uses HTTPS encryption.
 
-**Encryption at Rest:** Your prompts and settings are encrypted in our database.
+**Encryption at Rest:** Your prompts, settings, and accountability contact details are encrypted in our database. Accountability contacts use AES-256-GCM encryption keyed per user via PBKDF2.
 
 **Secure Authentication:** We use Supabase for authentication with industry-standard practices.
+
+**Payment Security:** All payment processing is handled by Stripe, a PCI-DSS Level 1 certified provider. We never access or store your full payment details.
 
 **Minimal Data Retention:** Page data sent for AI analysis is processed immediately and not stored.
 
 **Secure Infrastructure:** Our backend runs on secure cloud infrastructure (Render, Supabase).
 
-**Third-Party Services:** Google Gemini AI (for content analysis - no user data stored by Google), Supabase (database and authentication). No advertising or tracking services.`
+**Third-Party Services:** Google Gemini AI (for content analysis - no user data stored by Google), Supabase (database and authentication), Stripe (payment processing), Resend (transactional emails). No advertising or tracking services.`
     },
     {
         icon: Shield,
@@ -50,9 +58,10 @@ const sections = [
         content: `You have complete control over your data:
 
 **Access:** View your stored prompts and settings in the dashboard
-**Deletion:** Delete your account and all associated data at any time from Settings
+**Deletion:** Delete your account and all associated data at any time from Settings. This permanently removes all server-side data including your subscription, accountability contacts, unlock requests, weekly stats, email preferences, engagement events, and referral history.
 **Local Data:** Clear your local block history anytime from the extension
 **Export:** Your settings can be copied as presets
+**Email Preferences:** Manage your email communication preferences from the dashboard
 
 **Note:** This service is not currently GDPR compliant.`
     },
@@ -63,7 +72,9 @@ const sections = [
 
 **Local Data:** Block history retained until you clear it or uninstall the extension. Cached decisions persist until you change your rules.
 
-**Account Deletion:** When you delete your account, all server-side data is permanently removed.`
+**Usage Analytics:** Anonymized usage data (with hashed identifiers) may be retained for service improvement even after account deletion. This data cannot be linked back to your account.
+
+**Account Deletion:** When you delete your account, all personally identifiable server-side data is permanently removed, including your subscription, contacts, unlock requests, stats, preferences, and engagement history.`
     },
     {
         icon: Mail,
@@ -115,7 +126,7 @@ export default function Privacy() {
                             Your privacy is our priority. Learn how Beacon Blocker protects your data.
                         </p>
                         <p className="text-slate-400 mt-6">
-                            Last Updated: December 19, 2024
+                            Last Updated: February 15, 2026
                         </p>
                     </motion.div>
                 </div>
