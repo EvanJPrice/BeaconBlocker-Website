@@ -14,11 +14,11 @@ const faqs = [
     },
     {
         question: "How does it work?",
-        answer: "When you visit a page, we send its URL, title, and a brief page description to our server. The AI evaluates this against your instructions and returns a block or allow decision in real-time. Decisions are cached so repeat visits are instant."
+        answer: "When you visit a page, the extension encrypts the page's URL, title, and description before sending it to our server. The AI evaluates this against your instructions and returns a block or allow decision in real-time. Decisions are cached locally on your device so repeat visits are instant."
     },
     {
         question: "Is my browsing data collected or stored?",
-        answer: "When you visit a page, we send the URL, page title, and a brief page description to our secure server for AI analysis. This data is processed in real-time and NOT stored on our servers. Your activity log stays on your device, and your settings are encrypted in our database. We never sell your data."
+        answer: "Page data is encrypted before it leaves your browser using AES-256 encryption, then decrypted on our server only for AI analysis. This data is processed in real-time and immediately discarded — it is never stored. Your activity log and cache stay on your device, and your settings are encrypted in our database. We never sell your data."
     },
     {
         question: "Which websites does Beacon Blocker work on?",

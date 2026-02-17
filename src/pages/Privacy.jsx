@@ -10,7 +10,7 @@ const sections = [
 
 **Data Stored in Our Database:** Login credentials (email, securely hashed password), your AI prompts and preset names (encrypted at rest), blocking preferences (categories, allow/block lists), accountability contact details (name and email, encrypted with AES-256-GCM), email preferences, engagement events (e.g. pause/unpause activity), and bug reports you submit (optional).
 
-**Data Sent to Our Servers for AI Analysis:** URLs you visit (to determine if they should be blocked), page titles and metadata, and brief page content snippets (first 500 characters). This data is processed in real-time and NOT stored on our servers.
+**Data Sent to Our Servers for AI Analysis:** URLs you visit, page titles, metadata, and brief page descriptions. This data is encrypted in your browser (AES-256-GCM) before being sent to our server, where it is decrypted only for AI analysis. It is processed in real-time and immediately discarded — it is never stored on our servers.
 
 **Payment Information:** Subscription and billing data is handled entirely by Stripe. We do not store credit card numbers or bank details. We only store your Stripe customer ID and subscription status.
 
@@ -21,7 +21,7 @@ const sections = [
     {
         icon: Server,
         title: "How We Process Data",
-        content: `**AI Analysis:** When you visit a webpage, we send the URL, page title, and a brief content snippet to our secure server where an AI model determines if the page matches your blocking criteria. This decision is returned immediately and the page data is NOT stored.
+        content: `**AI Analysis:** When you visit a webpage, the extension encrypts the page's URL, title, and description using AES-256-GCM before sending it to our server. The data is decrypted only for AI analysis to determine if the page matches your blocking criteria. The decision is returned immediately and the page data is immediately discarded — it is never stored.
 
 **Your Prompts & Settings:** Your custom AI prompts and blocking preferences are encrypted and stored in our database, allowing you to sync settings across devices.
 
