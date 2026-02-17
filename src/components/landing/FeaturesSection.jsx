@@ -6,7 +6,7 @@ import {
     Sliders,
     Eye,
     Zap,
-    MessageSquare
+    RefreshCw
 } from 'lucide-react';
 
 const features = [
@@ -29,7 +29,7 @@ const features = [
         color: "from-rose-500 to-pink-500"
     },
     {
-        icon: MessageSquare,
+        icon: RefreshCw,
         title: "Presets & Auto-Sync",
         description: "Save different presets for work, study, or relaxation. Changes sync instantly — no save button needed.",
         color: "from-blue-500 to-indigo-500"

@@ -10,22 +10,22 @@ import {
 const faqs = [
     {
         question: "What is Beacon Blocker?",
-        answer: "Beacon Blocker is a Chrome extension that uses AI to block distracting websites based on your personal goals. Instead of manually adding sites to a blocklist, you describe what you want to avoid in plain English, and the AI evaluates each page you visit — blocking or allowing based on its URL and title."
+        answer: "Beacon Blocker is a Chrome extension that uses AI to block distracting websites based on your personal goals. Instead of manually adding sites to a blocklist, you describe what you want to avoid in plain English, and the AI automatically decides what to block as you browse."
     },
     {
-        question: "How does the AI work?",
-        answer: "Beacon Blocker uses Google's Gemini Flash model to evaluate pages against your instructions. When you visit a page, we send its URL and title to our server, and the AI returns a block or allow decision in real-time. Decisions are cached so repeat visits are instant."
+        question: "How does it work?",
+        answer: "When you visit a page, we send its URL, title, and a brief page description to our server. The AI evaluates this against your instructions and returns a block or allow decision in real-time. Decisions are cached so repeat visits are instant."
     },
     {
         question: "Is my browsing data collected or stored?",
-        answer: "When you visit a page, we send the URL and page title to our secure server for AI analysis. This data is processed in real-time and NOT stored. Your activity log stays on your device, and your settings are encrypted in our database. We never sell your data."
+        answer: "When you visit a page, we send the URL, page title, and a brief page description to our secure server for AI analysis. This data is processed in real-time and NOT stored on our servers. Your activity log stays on your device, and your settings are encrypted in our database. We never sell your data."
     },
     {
         question: "Which websites does Beacon Blocker work on?",
         answer: "Beacon Blocker works on virtually any website you visit. It evaluates pages at the URL level — so it can distinguish between different parts of a site (e.g. educational vs entertainment YouTube). You can also use quick-block categories and allow/block lists for simpler rules."
     },
     {
-        question: "Can I create different profiles for different situations?",
+        question: "Can I create multiple profiles?",
         answer: "Yes! We call them presets. You can save multiple presets for different browsing contexts — like 'Work Mode' that blocks social media, or 'Study Mode' that only allows .edu sites. Switch between them with one click."
     },
     {
