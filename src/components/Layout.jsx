@@ -22,7 +22,8 @@ export default function Layout({ children, currentPageName }) {
 
     const navLinks = [
         { name: 'Home', page: 'Home' },
-        { name: 'Privacy Policy', page: 'Privacy' }
+        { name: 'Privacy Policy', page: 'Privacy' },
+        { name: 'Terms of Service', page: 'Terms' }
     ];
 
     return (
@@ -208,6 +209,11 @@ export default function Layout({ children, currentPageName }) {
                                 <li>
                                     <Link to={createPageUrl('Privacy')} className="hover:text-white transition-colors">
                                         Privacy Policy
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to={createPageUrl('Terms')} className="hover:text-white transition-colors">
+                                        Terms of Service
                                     </Link>
                                 </li>
                             </ul>
