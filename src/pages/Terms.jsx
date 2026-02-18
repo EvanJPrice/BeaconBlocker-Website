@@ -82,7 +82,7 @@ const sections = [
         title: "Changes & Contact",
         content: `**Changes to These Terms:** We may update these Terms of Service from time to time. We will notify users of material changes by updating the "Last Updated" date below and, where appropriate, through email or dashboard notifications. Continued use of the service after changes constitutes acceptance of the updated terms.
 
-**Governing Law:** These terms are governed by the laws of Canada and the province in which the service operator resides. Any disputes shall be resolved in accordance with applicable Canadian law.
+**Governing Law:** These terms are governed by the laws of Canada and the Province of British Columbia. Any disputes shall be resolved in accordance with applicable Canadian law.
 
 **Severability:** If any provision of these terms is found to be unenforceable, the remaining provisions will continue in full force and effect.
 
