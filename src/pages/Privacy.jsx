@@ -81,7 +81,7 @@ const sections = [
         title: "Contact Us",
         content: `If you have any questions about this Privacy Policy or our data practices, please contact us:
 
-**Email:** beaconblocker.dev@gmail.com
+**Email:** support@beaconblocker.com
 
 **Response Time:** We aim to respond to all privacy-related inquiries within 48 hours.
 

@@ -42,7 +42,7 @@ const sections = [
 
 **Cancellation:** You may cancel your subscription at any time from the dashboard. Upon cancellation, you will retain access to paid features until the end of your current billing period.
 
-**Refunds:** Refunds are handled on a case-by-case basis. Contact us at beaconblocker.dev@gmail.com within 7 days of a charge if you believe it was made in error.
+**Refunds:** Refunds are handled on a case-by-case basis. Contact us at support@beaconblocker.com within 7 days of a charge if you believe it was made in error.
 
 **Price Changes:** We may adjust subscription pricing with at least 30 days' notice. Existing subscribers will be notified before any price change takes effect.`
     },
@@ -82,12 +82,12 @@ const sections = [
         title: "Changes & Contact",
         content: `**Changes to These Terms:** We may update these Terms of Service from time to time. We will notify users of material changes by updating the "Last Updated" date below and, where appropriate, through email or dashboard notifications. Continued use of the service after changes constitutes acceptance of the updated terms.
 
-**Governing Law:** These terms are governed by the laws of the United States. Any disputes shall be resolved in accordance with applicable law.
+**Governing Law:** These terms are governed by the laws of Canada and the province in which the service operator resides. Any disputes shall be resolved in accordance with applicable Canadian law.
 
 **Severability:** If any provision of these terms is found to be unenforceable, the remaining provisions will continue in full force and effect.
 
 **Contact Us:**
-**Email:** beaconblocker.dev@gmail.com
+**Email:** support@beaconblocker.com
 **Response Time:** We aim to respond to all inquiries within 48 hours.`
     }
 ];
@@ -232,7 +232,7 @@ export default function Terms() {
                         </h2>
                         <p className="text-slate-600 leading-relaxed">
                             If you have any questions about these Terms of Service, please contact us
-                            at <a href="mailto:beaconblocker.dev@gmail.com" className="text-[#1e3a5a] underline hover:text-[#2a4f73]">beaconblocker.dev@gmail.com</a>.
+                            at <a href="mailto:support@beaconblocker.com" className="text-[#1e3a5a] underline hover:text-[#2a4f73]">support@beaconblocker.com</a>.
                             You can also review our <a href="/privacy" className="text-[#1e3a5a] underline hover:text-[#2a4f73]">Privacy Policy</a> for
                             details on how your data is handled.
                         </p>
