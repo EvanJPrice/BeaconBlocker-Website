@@ -14,11 +14,11 @@ const faqs = [
     },
     {
         question: "How does it work?",
-        answer: "When you visit a page, the extension encrypts the page's URL, title, and description before sending it to our server. The AI evaluates this against your instructions and returns a block or allow decision in real-time. Decisions are cached locally on your device so repeat visits are instant."
+        answer: "When you visit a page, the extension encrypts the page's URL, title, and description before sending it to the server. The AI evaluates this against your instructions and returns a block or allow decision in real-time. Decisions are cached locally on your device so repeat visits are instant."
     },
     {
         question: "Is my browsing data collected or stored?",
-        answer: "Page data is encrypted before it leaves your browser using AES-256 encryption, then decrypted on our server only for AI analysis. This data is processed in real-time and immediately discarded — it is never stored. Your activity log and cache stay on your device, and your settings are encrypted in our database. We never sell your data."
+        answer: "Page data is encrypted before it leaves your browser using AES-256 encryption, then decrypted on the server only for AI analysis. This data is processed in real-time and immediately discarded — it is never stored. Your activity log and cache stay on your device, and your settings are encrypted in the database. I never sell your data."
     },
     {
         question: "Which websites does Beacon Blocker work on?",
@@ -26,11 +26,11 @@ const faqs = [
     },
     {
         question: "Can I create multiple profiles?",
-        answer: "Yes! We call them presets. You can save multiple presets for different browsing contexts — like 'Work Mode' that blocks social media, or 'Study Mode' that only allows .edu sites. Switch between them with one click."
+        answer: "Yes! They're called presets. You can save multiple presets for different browsing contexts — like 'Work Mode' that blocks social media, or 'Study Mode' that only allows .edu sites. Switch between them with one click."
     },
     {
         question: "Is Beacon Blocker free to use?",
-        answer: "Beacon Blocker is free through February — no credit card required. After February, new users get a 7-day free trial. A subscription is required after the trial to continue using the service. You can subscribe directly from your dashboard. We also have a referral program: share your code with friends and you'll both earn bonus days when they subscribe."
+        answer: "Beacon Blocker is free to start — no credit card required. New users get a 7-day free trial. A subscription is required after the trial to continue using the service. You can subscribe directly from your dashboard. There's also a referral program: share your code with friends and you'll both earn bonus days when they subscribe."
     },
     {
         question: "Does it slow down my browsing?",
