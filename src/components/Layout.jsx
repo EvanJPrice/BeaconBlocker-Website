@@ -70,7 +70,7 @@ export default function Layout({ children, currentPageName }) {
                                 Dashboard
                             </a>
                             <a
-                                href="https://dashboard.beaconblocker.com"
+                                href="https://chromewebstore.google.com/detail/beacon-blocker/pcdcefcldhcnbmiejmihlcphbglflakm"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -112,7 +112,7 @@ export default function Layout({ children, currentPageName }) {
                                         Dashboard
                                     </a>
                                     <a
-                                        href="https://dashboard.beaconblocker.com"
+                                        href="https://chromewebstore.google.com/detail/beacon-blocker/pcdcefcldhcnbmiejmihlcphbglflakm"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => setMobileMenuOpen(false)}

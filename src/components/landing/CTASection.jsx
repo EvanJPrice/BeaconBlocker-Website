@@ -42,7 +42,7 @@ export default function CTASection() {
                     </p>
 
                     {/* Referral callout */}
-                    <div className="inline-flex items-center gap-2 bg-amber-400/15 border border-amber-400/30 rounded-full px-5 py-2.5 mb-10">
+                    <div className="inline-flex items-center gap-2 bg-amber-400/15 border border-amber-400/30 rounded-full px-5 py-2.5 mb-10 cursor-default" title="Share your referral code with friends. When they subscribe, you both earn bonus days added to your subscription.">
                         <Gift className="w-4 h-4 text-amber-300" />
                         <span className="text-sm font-semibold text-amber-200">
                             Earn bonus days by referring friends

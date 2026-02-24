@@ -77,7 +77,7 @@ export default function HeroSection() {
                         </p>
 
                         {/* Referral banner */}
-                        <div className="mb-8 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-5 py-2.5">
+                        <div className="mb-8 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-5 py-2.5 cursor-default" title="Share your referral code with friends. When they subscribe, you both earn bonus days added to your subscription.">
                             <Gift className="w-4 h-4 text-amber-500" />
                             <span className="text-sm font-semibold text-amber-800">
                                 Earn bonus days by referring friends
