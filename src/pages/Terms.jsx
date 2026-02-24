@@ -34,7 +34,7 @@ const sections = [
     {
         icon: CreditCard,
         title: "Subscriptions & Billing",
-        content: `**Free Trial:** New users receive a 7-day free trial before a subscription is required.
+        content: `**Free Trial:** New users receive a 7-day free trial before a subscription is required. Free trials are limited to one per account. We use a one-way hash of your email to determine eligibility (see our Privacy Policy for details).
 
 **Subscription Plans:** Paid plans are available on a monthly or yearly basis. Pricing details are displayed in the dashboard before purchase.
 
@@ -66,7 +66,7 @@ const sections = [
 
 **By Us:** We reserve the right to suspend or terminate accounts that violate these terms, including but not limited to: abuse of the service, attempts to circumvent security measures, or conduct that negatively impacts other users or our infrastructure.
 
-**Effect of Termination:** Upon account deletion or termination, your server-side data will be permanently removed. Locally stored data (block history, cached decisions) will remain on your device until you uninstall the extension or clear it manually.`
+**Effect of Termination:** Upon account deletion or termination, your server-side data will be permanently removed. A one-way cryptographic hash of your email address is retained solely to enforce the one-trial-per-account policy. Locally stored data (block history, cached decisions) will remain on your device until you uninstall the extension or clear it manually.`
     },
     {
         icon: ShieldCheck,
@@ -128,7 +128,7 @@ export default function Terms() {
                             Please review the terms governing your use of Beacon Blocker.
                         </p>
                         <p className="text-slate-400 mt-6">
-                            Last Updated: February 17, 2026
+                            Last Updated: February 23, 2026
                         </p>
                     </motion.div>
                 </div>

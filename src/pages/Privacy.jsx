@@ -58,7 +58,7 @@ const sections = [
         content: `You have complete control over your data:
 
 **Access:** View your stored prompts and settings in the dashboard
-**Deletion:** Delete your account and all associated data at any time from Settings. This permanently removes all server-side data including your subscription, accountability contacts, unlock requests, weekly stats, email preferences, engagement events, and referral history.
+**Deletion:** Delete your account and all associated data at any time from Settings. This permanently removes all server-side data including your email, subscription, accountability contacts, unlock requests, weekly stats, email preferences, engagement events, and referral history. A one-way hash of your email (not the email itself) is retained solely to prevent free trial abuse (see Data Retention).
 **Local Data:** Clear your local block history anytime from the extension
 **Export:** Your settings can be copied as presets
 **Email Preferences:** Manage your email communication preferences from the dashboard
@@ -74,7 +74,9 @@ const sections = [
 
 **Usage Analytics:** Anonymized usage data (with hashed identifiers) may be retained for service improvement even after account deletion. This data cannot be linked back to your account.
 
-**Account Deletion:** When you delete your account, all personally identifiable server-side data is permanently removed, including your subscription, contacts, unlock requests, stats, preferences, and engagement history.`
+**Account Deletion:** When you delete your account, all personally identifiable server-side data is permanently removed, including your subscription, contacts, unlock requests, stats, preferences, and engagement history.
+
+**Trial Abuse Prevention:** To prevent abuse of our free trial system, we retain a one-way cryptographic hash (SHA-256) of your email address after account deletion. This hash cannot be reversed to recover your email. It is used solely to determine trial eligibility if you create a new account and is not used for marketing, shared with third parties, or linked to any other data.`
     },
     {
         icon: Mail,
@@ -126,7 +128,7 @@ export default function Privacy() {
                             Your privacy is our priority. Learn how Beacon Blocker protects your data.
                         </p>
                         <p className="text-slate-400 mt-6">
-                            Last Updated: February 15, 2026
+                            Last Updated: February 23, 2026
                         </p>
                     </motion.div>
                 </div>
