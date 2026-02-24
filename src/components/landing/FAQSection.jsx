@@ -30,7 +30,7 @@ const faqs = [
     },
     {
         question: "Is Beacon Blocker free to use?",
-        answer: "Beacon Blocker is free to start — no credit card required. New users get a 7-day free trial. A subscription is required after the trial to continue using the service. You can subscribe directly from your dashboard. There's also a referral program: share your code with friends and you'll both earn bonus days when they subscribe."
+        answer: "New users get a 7-day free trial. A subscription is required after the trial to continue using the service. You can subscribe directly from your dashboard. There's also a referral program: share your code with friends and you'll both earn bonus days when they subscribe."
     },
     {
         question: "Does it slow down my browsing?",

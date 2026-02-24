@@ -34,7 +34,7 @@ const sections = [
     {
         icon: CreditCard,
         title: "Subscriptions & Billing",
-        content: `**Free Period:** Beacon Blocker is currently free through February 2026. After this period, new users will receive a 7-day free trial before a subscription is required.
+        content: `**Free Trial:** New users receive a 7-day free trial before a subscription is required.
 
 **Subscription Plans:** Paid plans are available on a monthly or yearly basis. Pricing details are displayed in the dashboard before purchase.
 

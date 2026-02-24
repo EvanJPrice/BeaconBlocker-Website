@@ -41,11 +41,11 @@ export default function CTASection() {
                         Experience smarter browsing with AI-powered content blocking.
                     </p>
 
-                    {/* Promo callout */}
+                    {/* Referral callout */}
                     <div className="inline-flex items-center gap-2 bg-amber-400/15 border border-amber-400/30 rounded-full px-5 py-2.5 mb-10">
                         <Gift className="w-4 h-4 text-amber-300" />
                         <span className="text-sm font-semibold text-amber-200">
-                            Free to start — plus earn bonus days by referring friends
+                            Earn bonus days by referring friends
                         </span>
                     </div>
 
