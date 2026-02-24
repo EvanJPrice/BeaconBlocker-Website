@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Chrome, Gift } from "lucide-react";
+import { Chrome } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
@@ -75,14 +75,6 @@ export default function HeroSection() {
                             Beacon Blocker is your AI-powered browsing companion.
                             Block distracting sites, set timers and schedules, and stay focused with intelligent page-level filtering.
                         </p>
-
-                        {/* Referral banner */}
-                        <div className="mb-8 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-5 py-2.5 cursor-default" title="Share your referral code with friends. When they subscribe, you both earn bonus days added to your subscription.">
-                            <Gift className="w-4 h-4 text-amber-500" />
-                            <span className="text-sm font-semibold text-amber-800">
-                                Earn bonus days by referring friends
-                            </span>
-                        </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a
