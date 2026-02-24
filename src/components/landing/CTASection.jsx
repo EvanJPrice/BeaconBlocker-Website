@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { Chrome, ArrowRight, Gift } from 'lucide-react';
+import { Chrome, ArrowRight } from 'lucide-react';
 
 export default function CTASection() {
     return (
@@ -41,14 +41,6 @@ export default function CTASection() {
                         Experience smarter browsing with AI-powered content blocking.
                     </p>
 
-                    {/* Referral callout */}
-                    <div className="inline-flex items-center gap-2 bg-amber-400/15 border border-amber-400/30 rounded-full px-5 py-2.5 mb-10 cursor-default" title="Share your referral code with friends. When they subscribe, you both earn bonus days added to your subscription.">
-                        <Gift className="w-4 h-4 text-amber-300" />
-                        <span className="text-sm font-semibold text-amber-200">
-                            Earn bonus days by referring friends
-                        </span>
-                    </div>
-
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
                             href="https://chromewebstore.google.com/detail/beacon-blocker/pcdcefcldhcnbmiejmihlcphbglflakm"
@@ -78,7 +70,7 @@ export default function CTASection() {
                         </a>
                     </div>
 
-                    <p className="mt-8 text-slate-400 text-sm">
+                    <p className="mt-8 text-slate-400 text-sm whitespace-nowrap">
                         Available exclusively for Google Chrome. Already a user? Manage your subscription from the dashboard.
                     </p>
                 </motion.div>
