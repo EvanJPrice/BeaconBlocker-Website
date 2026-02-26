@@ -34,7 +34,7 @@ const sections = [
     {
         icon: CreditCard,
         title: "Subscriptions & Billing",
-        content: `**Free Trial:** New users receive a 7-day free trial before a subscription is required. Free trials are limited to one per account. We use a one-way hash of your email to determine eligibility (see our Privacy Policy for details).
+        content: `**Free Trial:** New users receive a 7-day free trial upon subscribing. Payment details are required to start the trial. Free trials are limited to one per account. We use a one-way hash of your email to determine eligibility (see our Privacy Policy for details).
 
 **Subscription Plans:** Paid plans are available on a monthly or yearly basis. Pricing details are displayed in the dashboard before purchase.
 
